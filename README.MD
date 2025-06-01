@@ -4,6 +4,7 @@ Este é um simulador completo de Máquina de Turing desenvolvido em Python com P
 
 ---
 
+
 ## ✨ Novos Recursos e Melhorias
 
 ### Definição Completa da Máquina de Turing
