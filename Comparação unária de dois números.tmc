@@ -1,0 +1,10 @@
+{
+    "states": "q0 q1 q2 q3 q4 q5 qf qv >= q<",
+    "tape_alphabet": "1,#",
+    "initial_state": "q0",
+    "blank_symbol": "_",
+    "halting_states": ">= q<",
+    "step_limit": "100",
+    "rules": "q0 _ _ R q1\n\nq1 1 x R q2\nq1 _ _ N q0\nq1 # # R q5\n\nq2 1 1 R q2\nq2 # # R q3\n\nq3 1 w L q4\nq3 w w R q3\nq3 _ _ L qv\n\nq4 w w L q4\nq4 # # L q4\nq4 1 1 L q4\nq4 x x R q1\n\nq5 w w R q5\nq5 1 1 L qf\nq5 _ _ L qv\n\nqf # # L qf\nqf w 1 L qf\nqf x 1 L qf\nqf _ _ R q<\n\nqv w 1 L qv\nqv x 1 L qv\nqv # # L qv\nqv 1 1 L qv\nqv _ _ Y q>=",
+    "input": "111#11"
+}

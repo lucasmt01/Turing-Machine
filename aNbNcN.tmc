@@ -1,0 +1,10 @@
+{
+    "states": "q0 q1 q2 q3 q4 q5 q6",
+    "tape_alphabet": "a,b,c",
+    "initial_state": "q0",
+    "blank_symbol": "_",
+    "halting_states": "q6",
+    "step_limit": "100",
+    "rules": "q0 _ _ R q1\n\nq1 _ _ N q1\nq1 a x R q2\nq1 w w R q5\n\nq2 a a R q2\nq2 b w R q3\nq2 w w R q2\n\nq3 b b R q3\nq3 c v L q4\nq3 v v R q3\n\nq4 a a L q4\nq4 b b L q4\nq4 w w L q4\nq4 v v L q4\nq4 x x R q1\n\nq5 w w R q5\nq5 v v R q5\nq5 _ _ Y q6",
+    "input": "aabbcc"
+}
