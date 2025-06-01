@@ -6,5 +6,5 @@
     "halting_states": "qAceita qRejeita",
     "step_limit": "12",
     "rules": "q0 _ _ R q2\nq2 1 1 R q1\nq1 1 1 R q2\nq1 _ _ N qRejeita\n\nq2 _ _ Y qAceita",
-    "input": "1111"
+    "input": "111"
 }

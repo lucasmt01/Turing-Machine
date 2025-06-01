@@ -1,6 +1,6 @@
 {
     "states": "q0 q1 q2 q3 q4 q5 q6",
-    "tape_alphabet": "a,b,c",
+    "tape_alphabet": "a,b,c,v,x,w",
     "initial_state": "q0",
     "blank_symbol": "_",
     "halting_states": "q6",

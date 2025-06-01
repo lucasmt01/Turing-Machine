@@ -1,38 +1,75 @@
-# Simulador de Máquina de Turing com Interface Gráfica
+# 🧠 Simulador de Máquina de Turing Determinística com Interface Gráfica
 
-Este é um simulador de Máquina de Turing desenvolvido em Python utilizando a biblioteca PyQt5 para a interface gráfica. O programa permite carregar regras, definir conteúdo inicial na fita, executar operações passo a passo ou até a parada total, e visualizar o estado atual da fita e do cabeçote.
+Este é um simulador completo de Máquina de Turing desenvolvido em Python com PyQt5. O programa permite definir todas as componentes de uma máquina de Turing `M = (K, Γ, δ, s, H)`, simular computações para uma entrada `w`, e visualizar o histórico completo da execução desde a configuração inicial `(s, ⊳_ w)` até a configuração de parada.
+
+---
+
+## ✨ Novos Recursos e Melhorias
+
+### Definição Completa da Máquina de Turing
+- **K (Estados)**: Campo dedicado para lista de estados
+- **Γ (Alfabeto da Fita)**: Definição dos símbolos permitidos na fita
+- **δ (Regras de Transição)**: Suporte completo a regras determinísticas e não-determinísticas
+- **s (Estado Inicial)**: Seleção do estado inicial
+- **H (Estados de Parada)**: Definição de estados de aceitação/rejeição
+- **Símbolo Branco (_)**: Personalização do símbolo de espaço vazio
+
+### Fluxo de Trabalho Aprimorado
+1. Configuração completa da máquina (K, Γ, s, _)
+2. Definição das regras de transição (δ)
+3. Especificação dos estados de parada (H)
+4. Entrada do conteúdo inicial da fita (w)
+5. Execução passo-a-passo ou contínua
+6. Visualização do resultado e histórico completo
+
+### Recursos de Visualização
+- **Fita Virtual**: 
+  - 31 células visíveis centradas na posição atual (onde a fita continua se espandido conforme necessário)
+  - Destaque na célula sendo lida
+  - Símbolos especiais ⊳ (início) e ⊔ (branco)
+- **Histórico Detalhado**:
+  - Todas as configurações desde o início
+  - Transições aplicadas em cada passo
+  - Botão para mostrar/esconder histórico
+- **Status em Tempo Real**:
+  - Estado atual
+  - Status da máquina (Pronto, Executando, Aceita, Rejeita)
+  - Posição do cabeçote
+
+### Funcionalidades Avançadas
+- **Validação de Entrada**:
+  - Verificação de símbolos contra Γ
+  - Alertas para estados/símbolos não definidos
+- **Persistência**:
+  - Salvar/carregar configuração completa (.tmc)
+  - Formato JSON com todos os parâmetros
+- **Controle de Execução**:
+  - Limite configurável de passos
+  - Confirmação para continuar após limite
+  - Reinício completo da simulação
+- **Tratamento de Resultados**:
+  - Aceita (Y) e Rejeita (N) explícitos
+  - Detecção de paradas não planejadas
+  - Exibição de fita final e estado
 
 ---
 
-## 🛠️ Análise do Código
+## 🖼️ Screenshot da Interface
 
-### Classes Principais:
-1. **`TapeWidget`**:
-   - Representa a fita da Máquina de Turing em uma interface gráfica.
-   - Exibe células com valores e destaca a posição atual do cabeçote (indicado por uma seta vermelha).
-   - Atualiza dinamicamente os valores da fita conforme a simulação avança.
-
-2. **`TuringMachine`**:
-   - Lógica da Máquina de Turing.
-   - Gerencia estados, regras, movimentos do cabeçote e conteúdo da fita.
-   - Suporta execução contínua (`run_until_halt`) ou passo a passo (`step`).
-
-3. **`TuringMachineGUI`**:
-   - Interface gráfica principal.
-   - Inclui campos para inserir conteúdo inicial da fita, regras, botões de controle (Executar, Passo, Reiniciar) e opções para carregar/salvar regras em arquivo.
-
-### Funcionalidades:
-- Visualização da fita com células dinâmicas.
-- Carregamento e salvamento de regras em arquivo (extensão `.tm`).
-- Feedback visual do status (Pronto, Executando, Parado).
-- Mensagens de resultado ao final da execução.
+![Screenshot da Interface](Screenshot.png)
 
 ---
+
+## ⬇️ Instalação
+
+### Pré-requisitos
+- Python 3.13
+- Pip (gerenciador de pacotes)
 
 ## 📥 Instalação das Dependências
 
 ### Pré-requisitos:
-- Python 3.x instalado ([Download Python](https://www.python.org/downloads/)).
+- Python 3.13 instalado ([Download Python](https://www.python.org/downloads/)).
 - Gerenciador de pacotes `pip` (já incluso em instalações recentes do Python).
 
 ### Instale o PyQt5:

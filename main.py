@@ -697,13 +697,6 @@ class TuringMachineGUI(QMainWindow):
             self.update_display()
             passos += 1
 
-        # Verificar se a máquina parou em estado não definido como de parada
-        if self.tm.halted and not self.tm.result and self.tm.state not in self.tm.halting_states:
-            self.tm.result = "Rejeita (sem transição)"
-            QMessageBox.warning(self, "Parada não planejada", 
-                                f"A máquina parou no estado '{self.tm.state}' que não é um estado de parada definido.")
-
-        # Adiciona configuração final ao histórico
         estado_final = self.tm.state
         fita_final = self.tm.get_tape_content()
         head_final = self.tm.head_pos
