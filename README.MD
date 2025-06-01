@@ -1,6 +1,6 @@
 # 🧠 Simulador de Máquina de Turing com Interface Gráfica
 
-Este é um simulador completo de Máquina de Turing desenvolvido em Python com PyQt5. O programa permite definir todas as componentes de uma máquina de Turing `M = (K, Γ, δ, s, H)`, simular computações para uma entrada `w`, e visualizar o histórico completo da execução desde a configuração inicial `(s, ⊳⊔ w)` até a configuração de parada.
+Este é um simulador completo de Máquina de Turing desenvolvido em Python com PyQt5. O programa permite definir todas as componentes de uma máquina de Turing `M = (K, Γ, δ, s, H)`, simular computações para uma entrada `w`, e visualizar o histórico completo da execução desde a configuração inicial `(s, ⊳_ w)` até a configuração de parada.
 
 ---
 
@@ -12,10 +12,10 @@ Este é um simulador completo de Máquina de Turing desenvolvido em Python com P
 - **δ (Regras de Transição)**: Suporte completo a regras determinísticas e não-determinísticas
 - **s (Estado Inicial)**: Seleção do estado inicial
 - **H (Estados de Parada)**: Definição de estados de aceitação/rejeição
-- **Símbolo Branco (□)**: Personalização do símbolo de espaço vazio
+- **Símbolo Branco (_)**: Personalização do símbolo de espaço vazio
 
 ### Fluxo de Trabalho Aprimorado
-1. Configuração completa da máquina (K, Γ, s, □)
+1. Configuração completa da máquina (K, Γ, s, _)
 2. Definição das regras de transição (δ)
 3. Especificação dos estados de parada (H)
 4. Entrada do conteúdo inicial da fita (w)
@@ -26,7 +26,7 @@ Este é um simulador completo de Máquina de Turing desenvolvido em Python com P
 - **Fita Virtual**: 
   - 31 células visíveis centradas na posição atual
   - Destaque na célula sendo lida
-  - Símbolos especiais ⊳ (início) e ⊔ (espaço)
+  - Símbolos especiais ⊳ (início) e _ (branco)
 - **Histórico Detalhado**:
   - Todas as configurações desde o início
   - Transições aplicadas em cada passo
